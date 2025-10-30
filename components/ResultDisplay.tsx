@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import {
   FaQuoteLeft,
   FaExclamationTriangle,
@@ -13,6 +14,7 @@ interface ResultDisplayProps {
 }
 
 function ResultDisplay({ response, onRestart }: ResultDisplayProps) {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,6 +57,11 @@ function ResultDisplay({ response, onRestart }: ResultDisplayProps) {
       setSubmitStatus("success");
       setSubmitMessage("Thank you! Your request has been sent.");
       setFormData({ name: "", email: "", message: "" }); // Clear form
+
+      // Redirect to thank-you page after a short delay
+      setTimeout(() => {
+        router.push("https://ipguardian.com.au/tools/thank-you/");
+      }, 1500); // 1.5 second delay to show success message
     } catch (error: unknown) {
       console.error(error);
       setSubmitStatus("error");
