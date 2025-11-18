@@ -90,50 +90,12 @@ export const questions: Question[] = [
     heading: "Practical Use",
     question: "Does your invention have a specific and practical use?",
     options: [
-      { label: "Yes", goTo: 8 },
-      { 
-        label: "No", 
+      { label: "Yes", goTo: 11 },
+      {
+        label: "No",
         response: "Patents require practical applicability. Without a specific use, your invention may not qualify for patent protection. Contact our Patent Attorneys to explore your options.",
-        complete: true 
+        complete: true
       },
-    ],
-  },
-  // Q8 - Did you personally develop the invention?
-  {
-    id: 8,
-    heading: "Invention Ownership",
-    question: "Did you personally develop the invention?",
-    options: [
-      { label: "Yes", goTo: 9 },
-      { 
-        label: "No", 
-        response: "You may not be the inventor which may mean that you are not entitled to apply for a patent. Contact our Patent Attorneys to get tailored advice.",
-        complete: true 
-      },
-    ],
-  },
-  // Q9 - Was it developed under an employment or contractual agreement?
-  {
-    id: 9,
-    heading: "Employment Agreement",
-    question: "Was it developed under an employment or contractual agreement?",
-    options: [
-      { label: "Yes", goTo: 10 },
-      { label: "No", goTo: 11 },
-    ],
-  },
-  // Q10 - Does your contract specify ownership?
-  {
-    id: 10,
-    heading: "Contract Ownership",
-    question: "Does your contract specify that the employer or contractor owns inventions developed during your work?",
-    options: [
-      { 
-        label: "Yes", 
-        response: "Ownership can affect your ability to be granted a patent. You may need to check employment or contractor agreements. Contact our Patent Attorneys for advice tailored to your requirements.",
-        complete: true 
-      },
-      { label: "No / Unsure", goTo: 11 },
     ],
   },
   // Q11 - Have you already applied for a patent?
@@ -156,15 +118,15 @@ export const questions: Question[] = [
     heading: "Next Steps",
     question: "Would you like to speak with a patent attorney about protecting your invention?",
     options: [
-      { 
-        label: "Yes", 
+      {
+        label: "Yes",
         response: "Please provide your contact details and we'll arrange a complimentary consultation with one of our patent attorneys to discuss protecting your invention.",
-        complete: true 
+        complete: true
       },
-      { 
-        label: "No", 
-        response: "We hope that our tool has helped you understand what can be protected but if you still have questions then feel free to book a complimentary meeting with one of our attorneys at [link placeholder]. We recommend reviewing our resources or contacting a professional for tailored advice.",
-        complete: true 
+      {
+        label: "No",
+        response: "We hope that our tool has helped you understand what can be protected but if you still have questions then feel free to book a complimentary meeting with one of our attorneys at this link.",
+        complete: true
       },
     ],
   },
